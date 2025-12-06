@@ -1,6 +1,6 @@
 结构体的默认值
 
-```Go
+```go
 type Data struct {
     Url     string
     Content string
@@ -13,7 +13,7 @@ fmt.Println(d.Content == "") // true
 
 创建数组与数组索引
 
-```Go
+```go
 nums := make([]int, 0)
 nums = append(nums, 1)
 nums = append(nums, 2)
@@ -25,7 +25,7 @@ fmt.Println(nums[1])              // 2
 
 panic与recover
 
-```Go
+```go
 type ErrorCode int
 type MyError struct {
     Code    ErrorCode `json:"code"`
@@ -49,7 +49,7 @@ panic(MyError{Code: 500, Message: "Internal Server Error"})
 
 斐波那契（迭代器）
 
-```Go
+```go
 func Fibonacci(n int) func(yield func(int) bool) {
 	a, b, c := 0, 1, 1
 	return func(yield func(int) bool) {
@@ -73,7 +73,7 @@ func main() {
 
 使用channel实现生成器
 
-```Go
+```go
 func Generate() <-chan int {
 	ch := make(chan int)
 
