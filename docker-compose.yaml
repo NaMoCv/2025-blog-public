@@ -1,6 +1,7 @@
 services:
   blog:
     image: blog:latest
+    build: .
     ports:
       - 3002:3000
     restart: always
